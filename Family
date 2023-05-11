@@ -1,0 +1,20 @@
+# Расчет доходов семьи но копейки считает не точно.Рубли нормально
+
+h = float(input())
+w = float(input())
+
+cash_kopeyka = int((h * 100) + (w * 100))
+
+otpusk = int(cash_kopeyka * 0.1)
+eda = int(cash_kopeyka * 0.3)
+komun = int(cash_kopeyka * 0.05)
+wihi = int(cash_kopeyka * 0.15)
+
+nakoplen = (cash_kopeyka - (otpusk + eda + komun + wihi)) / 100
+nakoplen2 = int(nakoplen * 100) - int(nakoplen) * 100
+
+print("Отпуск:", int(otpusk // 100), "руб.", int(otpusk % 100), "коп.")
+print("Пропитание и еда:", int(eda // 100), "руб.", int(eda % 100), "коп.")
+print("Коммунальные платежи:", int(komun // 100), "руб.", int(komun % 100), "коп.")
+print("Досуг:", int(wihi // 100), "руб.", int(wihi % 100), "коп.")
+print("Накопления:", int(nakoplen), "руб.", int(nakoplen2), "коп.")
